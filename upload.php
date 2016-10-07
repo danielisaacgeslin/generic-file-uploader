@@ -15,6 +15,11 @@ if(count($_FILES) and upload()){
   $response = json_encode(array('status' => 'OK', 'payload' => FILE_NAME));
 }
 
+if($_POST['data']){
+  file_put_contents("file.xml", $_POST['data']);
+  $response = json_encode(array('status' => 'OK', 'payload' => 'file.xml'));
+}
+
 echo $response;
 
 ?>

@@ -3,10 +3,16 @@
 <body>
 
 <form action="upload.php" method="post" enctype="multipart/form-data">
-    <h1>Select file to upload:</h1>
+    <h1>Select file to upload: $_FILE</h1>
     <input type="file" name="fileToUpload">
     <hr />
-    <button type="submit" value="Upload" name="submit">Upload</button>
+    <button type="submit" name="submit">Upload</button>
+</form>
+
+<form action="upload.php" method="post">
+    <h1>Select file to upload: $_POST (xml format)</h1>
+    <textarea name="data"></textarea>
+    <button type="submit" name="submit">Upload</button>
 </form>
 
 </body>
